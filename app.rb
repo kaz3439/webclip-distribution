@@ -20,7 +20,7 @@ class WebclipDistribution < Sinatra::Base
     content_type MIME_TYPE
     url_scheme = @@conf['url_scheme_prefix']+'shibya' # may be replaced...
     content = webclip(url_scheme, @@conf['configuration'])
-    Plist::Emit.dump(payload(content, @@conf['webclip']))
+    Plist::Emit.dump(payload([content], @@conf['webclip']))
   end
 
   def payload(contents=[], conf)
@@ -46,7 +46,7 @@ class WebclipDistribution < Sinatra::Base
     content_payload['PayloadDisplayName'] = conf['display_name']
     content_payload['PayloadDescription'] = conf['description']
     content_payload['Icon'] = conf['icon'] if conf['icon']
-    content_payload['Label'] = conf['label'] if conf['label']
+    content_payload['Label'] = conf['label']
     content_payload['URL'] = url_scheme
     content_payload['IsRemovable'] = true
     content_payload['FullScreen'] = true
