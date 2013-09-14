@@ -1,0 +1,12 @@
+configuration:
+  identifier: com.piccolle.webclip.configuration
+  organization: mixi, inc.
+  display_name: PicColle
+  description: pic icons on Home Screen
+webclip:
+  identifier: com.piccolle.webclip.content
+  organization: mixi, inc.
+  display_name: PicColle
+  description: pic icons on Home Screen
+  label: piccolle
+url_scheme_prefix: comgooglemaps://?q=
