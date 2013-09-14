@@ -10,4 +10,4 @@ webclip:
   display_name: PicColle
   description: pic icons on Home Screen
   label: piccolle
-url_scheme_prefix: http://mixi.jp
+url_scheme_prefix: 'photos-redirect:'

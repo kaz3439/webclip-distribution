@@ -18,7 +18,7 @@ class WebclipDistribution < Sinatra::Base
 
   get '/webclip' do
     content_type MIME_TYPE
-    url_scheme = @@conf['url_scheme_prefix']+'shibya' # may be replaced...
+    url_scheme = @@conf['url_scheme_prefix'] # may be replaced...
     content = webclip(url_scheme, @@conf['configuration'])
     Plist::Emit.dump(payload([content], @@conf['webclip']))
   end
